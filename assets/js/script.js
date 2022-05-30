@@ -254,6 +254,14 @@ var auditTask = function(taskEl) {
   }
 };
 
+//Auditing page
+
+setInterval(function () {
+  $(".card .list-group-item").each(function(index, el) {
+    auditTask(el);
+  });
+}, 1800000);
+
 //trash can
 $("#trash").droppable({
   accept: ".card .list-group-item",
